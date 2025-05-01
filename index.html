@@ -6,14 +6,27 @@
     <title>Document</title>
 </head>
 <body>
-    <script>
-        var dato=20;
 
-        if(dato>10){
-            document.write("La condición es verdadera");
-        }else{
-            document.write("La condición es falsa");
+    <script>
+        var nombre = prompt("¿Cuál es tu nombre?");
+
+        var favoriteMovie = prompt("¿Qué película te gusta?");
+
+        if (favoriteMovie.toLowerCase() === 'shrek') 
+            {
+            var img = document.createElement('img');
+            img.src = 'https://elcomercio.pe/resizer/v2/OVSRQ4YQ2RF3PESEOCW6NSADHU.jpg?auth=97dc77af2438d5dcb920968d1a582b003c9afcab37488fe4ff5200129585960a&width=1200&height=1200&quality=75&smart=true';
+            img.alt = 'shrek';
+            img.style.maxWidth = '500px';
+            img.style.marginTop = '50px';
+    
+            document.body.appendChild(img);
+    
+            alert(`¡${nombre}, shrek es una excelente película!`);
+        } else {
+            alert(`${nombre}, tu película favorita no es shrek`);
         }
     </script>
+
 </body>
 </html>
